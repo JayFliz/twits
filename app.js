@@ -4,10 +4,10 @@ var moment      = require('moment');
 
 // Auth to Twitter
 var client = new twitter({
-    consumer_key: 'xxxxxxxxxxxxxxxxxxxxxxxxx',
-    consumer_secret: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-    access_token_key: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-    access_token_secret: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+    consumer_key: 'r4otwr0ZQMFa2MqV6O1c5phQZ',
+    consumer_secret: 'DG90CgkxLQCb7xLS6uKamRhaDCPjiSb1VDHsgmUOSpyiqEu7WH',
+    access_token_key: '14233500-VViSqxhIztrPfbNoeoW36mk8d9fmblNaNbbos3YCw',
+    access_token_secret: '79Zuxxfb3Y6pIvbZXjI3mujFxnxdNHVXZWXucjgMImQj5'
 });
 
 // Do things!
@@ -33,7 +33,7 @@ function snapTweet () {
 
           // If we find a tweet which is expired, call the function to delete it.
           // Unless it's favourited, in which case leave it alone.
-          if (moment(now).isAfter(expiryDate) && moment(tweetDate).isAfter('2016-03-03') && favd === false) {
+          if (moment(now).isAfter(expiryDate) && favd === false) {
               deleteTweet(id);
           }
 
