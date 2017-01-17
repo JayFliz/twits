@@ -33,7 +33,7 @@ function snapTweet () {
 
           // If we find a tweet which is expired, call the function to delete it.
           // Unless it's favourited, in which case leave it alone.
-          if (moment(now).isAfter(expiryDate) && favd === false) {
+          if ( favd === false) {
               deleteTweet(id);
           }
 
